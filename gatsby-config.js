@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Musles Merchandise',
     description:
       'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
   },
@@ -59,6 +59,13 @@ module.exports = {
         ],
       },
     },
+    {
+            resolve: "gatsby-source-shopify",
+            options: {
+                shopName: "iron-jimmy-sleeves",
+                accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+                verbose: true,
+            },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
